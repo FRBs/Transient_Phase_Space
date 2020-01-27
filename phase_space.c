@@ -64,13 +64,20 @@ int main ( int argc, char* argv[])
   fprintf(gnuplot, "unset key\n");
 
   /* Set line styles */
-  fprintf(gnuplot, "set termoption dash\n");
-  fprintf(gnuplot, "set style line 1 lc -1 lw 1 dashtype 2\n");
+  fprintf(gnuplot, "if (GPVAL_VERSION < 5.0) set termoption dash\n");
+  //fprintf(gnuplot, "set style line 1 lc -1 lw 1 dashtype 2\n");
+  fprintf(gnuplot, "if (GPVAL_VERSION >= 5.0) set style line 1 lc -1 lw 1 dashtype 2\n");
+  fprintf(gnuplot, "if (GPVAL_VERSION < 5.0) set style line 1 lc -1 lw 1\n");
   fprintf(gnuplot, "set style line 2 lc -1 lw 1\n");
-  fprintf(gnuplot, "set style line 3 lc rgb \"#66CDAA\" dashtype 2 lw 1\n");
+  //  fprintf(gnuplot, "set style line 3 lc rgb \"#66CDAA\" dashtype 2 lw 1\n");
+  fprintf(gnuplot, "if (GPVAL_VERSION >= 5.0) set style line 3 lc rgb \"#66CDAA\" lw 1 dashtype 2\n");
+  fprintf(gnuplot, "if (GPVAL_VERSION < 5.0) set style line 3 lc rgb \"#66CDAA\" lw 1\n");
   fprintf(gnuplot, "set style line 4 lc rgb \"#66CDAA\" lw 1\n");
-  fprintf(gnuplot, "set style line 5 lc rgb \"#FA8072\" dashtype 2 lw 1\n");
+  //  fprintf(gnuplot, "set style line 5 lc rgb \"#FA8072\" dashtype 2 lw 1\n");
+  fprintf(gnuplot, "if (GPVAL_VERSION >= 5.0) set style line 5 lc rgb \"#FA8072\" lw 1 dashtype 2\n");
+  fprintf(gnuplot, "if (GPVAL_VERSION < 5.0) set style line 5 lc rgb \"#FA8072\" lw 1\n");
   fprintf(gnuplot, "set style line 6 lc rgb \"#FA8072\" lw 1\n");
+
 
   /* Parkes Cryo-PAF sensitivities */
   // z = 0.1
