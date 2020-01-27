@@ -1,6 +1,10 @@
 DONE
 24/1/20 - UPLOADED A BASIC WORKING VERSION
+27/1/20 - MAKE A C VERSION THAT REPLICATED GP SCRIPT
+27/1/20 - ADD SOME PLOTTING OPTION FLAGS TO C SCRIPT
 
 TO DO
-Make this up to date for beginning of 2020.
-Do a wrapper with some flags for optional plotting in a nice way.
+Make plotting options nicer
+Make all data files up to date for beginning of 2020.
+
+
