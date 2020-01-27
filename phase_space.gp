@@ -8,9 +8,9 @@
 #							#
 #########################################################
 
-#set term x11
-set terminal postscript enhanced color solid
-set output "phase_space_ewass.ps"
+set term x11
+#set terminal postscript enhanced color solid
+#set output "phase_space_ewass.ps"
 
 #set title "Radio Transient Phase Space"
 set xlabel "{/Symbol n}.W (GHz s)"

@@ -12,3 +12,7 @@ OR
 https://ui.adsabs.harvard.edu/abs/2018NatAs...2..865K/
 
 but you don't have to.
+
+For the C version just compile with something like:
+
+gcc phase_space.c -o phase_space
