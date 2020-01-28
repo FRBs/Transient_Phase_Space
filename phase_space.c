@@ -95,7 +95,9 @@ int main ( int argc, char* argv[])
   //fprintf(gnuplot, "set label \"TVLM 513\" front at 4.0e3,5.0e-7 textcolor lt -1\n");
   fprintf(gnuplot, "set label \"Flare Stars/Brown Dwarves\" front at 10,8.0e-9 textcolor rgb '#8B4513'\n");
   fprintf(gnuplot, "set label \"Jupiter DAM\" front at 4.0e-5,8.0e-10 textcolor lt -1\n");
-  fprintf(gnuplot, "set label \"X-ray Binaries\" front at 1.0e6,2.0e-1 textcolor rgb '#CD853F'\n");
+  //fprintf(gnuplot, "set label \"X-ray Binaries\" front at 1.0e6,2.0e-1 textcolor rgb '#CD853F'\n");
+  fprintf(gnuplot, "set label \"XRBs\" front at 3.0e4,2.0e-1 textcolor rgb '#CD853F'\n");
+  fprintf(gnuplot, "set label \"MKT J1704\" front at 5.0e6,1.0e-1 textcolor rgb '#78B3A7'\n");
   fprintf(gnuplot, "set label \"AGN/Blazar/QSO\" front at 4.0e3,1.0e+14 textcolor rgb '#0000FF'\n");
   //fprintf(gnuplot, "set label \"QSO/TDE\" front at 5.0e2,1.0e+12 textcolor lt 3\n");
   fprintf(gnuplot, "set label \"GRBs\" front at 3.0e5,1.0e+11 textcolor lt 1\n");
@@ -144,7 +146,7 @@ int main ( int argc, char* argv[])
     fprintf(gnuplot, "replot '%ssolar_vals' every ::1 using 5:6 pt 7 ps 1 lt rgb '#FFA500' notitle\n",path);
   }
   if (slow==1){
-    fprintf(gnuplot, "replot '%smisc' using 1:2 pt 7 ps 1 lt rgb '#8B4513' notitle, 'gach_rud/Gosia_AGN_QSO_Blazar_TDE2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#0000FF' notitle, 'gach_rud/Gosia_XRB2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#CD853F' notitle, 'gach_rud/Gosia_GRB2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt 1 notitle, 'gach_rud/Gosia_SN2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#808080' notitle, 'gach_rud/Gosia_RSCVn2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt -1 notitle, 'gach_rud/Gosia_flare_stars2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#8B4513' notitle, 'gach_rud/Gosia_Novae2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt 6 notitle, 'gach_rud/Gosia_MagCV2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#228B22' notitle, 'gach_rud/gw170817' pt 7 ps 1 lt 1 notitle\n",path);
+    fprintf(gnuplot, "replot '%sflarey_boi' using 1:2 pt 7 ps 1 lt rgb '#78B3A7' notitle, '%smisc' using 1:2 pt 7 ps 1 lt rgb '#8B4513' notitle, 'gach_rud/Gosia_AGN_QSO_Blazar_TDE2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#0000FF' notitle, 'gach_rud/Gosia_XRB2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#CD853F' notitle, 'gach_rud/Gosia_GRB2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt 1 notitle, 'gach_rud/Gosia_SN2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#808080' notitle, 'gach_rud/Gosia_RSCVn2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt -1 notitle, 'gach_rud/Gosia_flare_stars2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#8B4513' notitle, 'gach_rud/Gosia_Novae2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt 6 notitle, 'gach_rud/Gosia_MagCV2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#228B22' notitle, 'gach_rud/gw170817' pt 7 ps 1 lt 1 notitle\n",path,path);
   }
 
   /* Parkes CryoPAF */
