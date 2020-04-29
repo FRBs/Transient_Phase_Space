@@ -93,6 +93,7 @@ int main ( int argc, char* argv[])
   //fprintf(gnuplot, "set label \"AD Leo\" front at 300,5.0e-6 textcolor lt -1\n");
   //fprintf(gnuplot, "set label \"BD LP944\" front at 200,8.0e-9 textcolor lt -1\n");
   //fprintf(gnuplot, "set label \"TVLM 513\" front at 4.0e3,5.0e-7 textcolor lt -1\n");
+  fprintf(gnuplot, "set label \"SGR 1935+2154\" front at 1.0e-4,3.0e7 textcolor rgb '#78B3A7'\n");
   fprintf(gnuplot, "set label \"Flare Stars/Brown Dwarves\" front at 10,8.0e-9 textcolor rgb '#8B4513'\n");
   fprintf(gnuplot, "set label \"Jupiter DAM\" front at 4.0e-5,8.0e-10 textcolor lt -1\n");
   //fprintf(gnuplot, "set label \"X-ray Binaries\" front at 1.0e6,2.0e-1 textcolor rgb '#CD853F'\n");
@@ -146,7 +147,8 @@ int main ( int argc, char* argv[])
     fprintf(gnuplot, "replot '%ssolar_vals' every ::1 using 5:6 pt 7 ps 1 lt rgb '#FFA500' notitle\n",path);
   }
   if (slow==1){
-    fprintf(gnuplot, "replot '%sflarey_boi' using 1:2 pt 7 ps 1 lt rgb '#78B3A7' notitle, '%smisc' using 1:2 pt 7 ps 1 lt rgb '#8B4513' notitle, 'gach_rud/Gosia_AGN_QSO_Blazar_TDE2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#0000FF' notitle, 'gach_rud/Gosia_XRB2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#CD853F' notitle, 'gach_rud/Gosia_GRB2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt 1 notitle, 'gach_rud/Gosia_SN2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#808080' notitle, 'gach_rud/Gosia_RSCVn2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt -1 notitle, 'gach_rud/Gosia_flare_stars2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#8B4513' notitle, 'gach_rud/Gosia_Novae2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt 6 notitle, 'gach_rud/Gosia_MagCV2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#228B22' notitle, 'gach_rud/gw170817' pt 7 ps 1 lt 1 notitle\n",path,path);
+    fprintf(gnuplot, "set arrow from 0.0014,141135000.00 to 0.0014,14113500000.0 lt rgb '#78B3A7' lw 2 front\n"); // SGR 1935+2154 lower limit
+    fprintf(gnuplot, "replot '%sSGR1935+2154' using ($3*$4):($1*$2*$2) pt 7 ps 1 lt rgb '#78B3A7' notitle, '%sflarey_boi' using 1:2 pt 7 ps 1 lt rgb '#78B3A7' notitle, '%smisc' using 1:2 pt 7 ps 1 lt rgb '#8B4513' notitle, 'gach_rud/Gosia_AGN_QSO_Blazar_TDE2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#0000FF' notitle, 'gach_rud/Gosia_XRB2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#CD853F' notitle, 'gach_rud/Gosia_GRB2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt 1 notitle, 'gach_rud/Gosia_SN2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#808080' notitle, 'gach_rud/Gosia_RSCVn2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt -1 notitle, 'gach_rud/Gosia_flare_stars2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#8B4513' notitle, 'gach_rud/Gosia_Novae2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt 6 notitle, 'gach_rud/Gosia_MagCV2' using ($2*86400.0*$9):($7*1.05026e-20) pt 7 ps 1 lt rgb '#228B22' notitle, 'gach_rud/gw170817' pt 7 ps 1 lt 1 notitle\n",path,path,path);
   }
 
   /* Parkes CryoPAF */
