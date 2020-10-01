@@ -124,7 +124,7 @@ int main ( int argc, char* argv[])
     fprintf(gnuplot, "set arrow from 2.0e5,4.0e3 to 2.0e7,10 lt -1 lw 2 front\n");
 
     /* Constant Brightness Temperature Lines */
-    fprintf(gnuplot, "replot L12(x) notitle w filledcurve x2=10 lt rgb '#87CEFA', L4(x) notitle lt 0 lw 2, L8(x) notitle lt 0 lw 2, L12(x) notitle lt 0 lw 2, L16(x) notitle lt 0 lw 2, L20(x) notitle lt 0 lw 2, L24(x) notitle lt 0 lw 2, L28(x) notitle lt 0 lw 2, L32(x) notitle lt 0 lw 2, L36(x) notitle lt 0 lw 2, L40(x) notitle lt 0 lw 2\n");
+    fprintf(gnuplot, "replot L12(x) notitle w filledcurve x2=1e10 lt rgb '#87CEFA', L4(x) notitle lt 0 lw 2, L8(x) notitle lt 0 lw 2, L12(x) notitle lt 0 lw 2, L16(x) notitle lt 0 lw 2, L20(x) notitle lt 0 lw 2, L24(x) notitle lt 0 lw 2, L28(x) notitle lt 0 lw 2, L32(x) notitle lt 0 lw 2, L36(x) notitle lt 0 lw 2, L40(x) notitle lt 0 lw 2\n");
   }
   if (psr==1){
     fprintf(gnuplot, "set label \"Pulsars\" front at 1.0e-7,1.0e-2 textcolor rgb '#0000FF'\n");
